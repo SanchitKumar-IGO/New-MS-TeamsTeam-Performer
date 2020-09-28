@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="TEAMS_NavigateToTeams" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1020,1038.66666666667" sap2010:WorkflowViewState.IdRef="TEAMS_NavigateToTeams_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="TEAMS_NavigateToTeams" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1020,1100.66666666667" sap2010:WorkflowViewState.IdRef="TEAMS_NavigateToTeams_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -45,24 +45,25 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TEAMS_NavigateToTeams" sap:VirtualizedContainerService.HintSize="476,874" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TEAMS_NavigateToTeams" sap:VirtualizedContainerService.HintSize="476,936" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Dashboard'" sap:VirtualizedContainerService.HintSize="434,782" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3088c5749e5c8dfdf9ec214b0872725c" Selector="&lt;html app='chrome.exe' title='Dashboard - Microsoft Teams admin center' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Dashboard'" sap:VirtualizedContainerService.HintSize="434,844" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="3088c5749e5c8dfdf9ec214b0872725c" Selector="&lt;html app='chrome.exe' title='Dashboard - Microsoft Teams admin center' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,636" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,698" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:RefreshBrowser Browser="{x:Null}" DisplayName="Refresh Browser" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="RefreshBrowser_1" />
             <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'H1'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1c9c2674-c2fd-4a94-b354-c4d1130814d1" InformativeScreenshot="65513dda9f009f791249900e2389632b" Selector="&lt;webctrl tag='H1' aaname='Dashboard' /&gt;" TimeoutMS="2000">
